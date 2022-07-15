@@ -12,5 +12,3 @@ def cesar (text):
         cypherAlpha += alphabet[index]
 
     return cypherAlpha
-
-print(cesar('wxyz'))
