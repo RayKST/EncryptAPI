@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from Cyphers.cesar import cesar
+from Cyphers.cesar import Cesar
 
 app = FastAPI()
 
@@ -18,8 +18,8 @@ def index(value = None):
     }
 
 @app.get("/cesar")
-def cypherCesar(text : str):
+def cypherCesar(text : str, key : int = 3):
     return {
         "Main Text": text,
-        "Encrypy Text" : cesar(text)
+        "Encrypy Text" : Cesar(text, key)
     }
